@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="BeerType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Темне"/>
+            <xs:enumeration value="Світле"/>
+            <xs:enumeration value="Лагерне"/>
+            <xs:enumeration value="Живе"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="YesNo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes"/>
+            <xs:enumeration value="no"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="PackagingType">
+        <xs:sequence>
+            <xs:element name="Volume" type="xs:float" minOccurs="0"/>
+            <xs:element name="Material" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CharsType">
+        <xs:sequence>
+            <xs:element name="AlcoholContent" type="xs:float" minOccurs="0"/>
+            <xs:element name="Transparency" type="xs:float" minOccurs="0" maxOccurs="100"/>
+            <xs:element name="Filtered" type="xs:boolean"/>
+            <xs:element name="Calories" type="xs:float" minOccurs="0"/>
+            <xs:element name="Packaging" type="PackagingType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="IngredientsType">
+        <xs:sequence>
+            <xs:element name="Ingredient" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="BeerItemType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Type" type="BeerType"/>
+            <xs:element name="Manufacturer" type="xs:string"/>
+            <xs:element name="Ingredients" type="IngredientsType"/>
+            <xs:element name="Chars" type="CharsType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="Al" type="YesNo" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="Beer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="BeerItem" type="BeerItemType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

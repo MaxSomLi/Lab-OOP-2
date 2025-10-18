@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Beer>
+
+    <BeerItem id="b1" Al="yes">
+        <Name>Львівське 1715</Name>
+        <Type>Світле</Type>
+        <Manufacturer>Львівська пивоварня</Manufacturer>
+        <Ingredients>
+            <Ingredient>вода</Ingredient>
+            <Ingredient>ячмінний солод</Ingredient>
+            <Ingredient>хміль</Ingredient>
+        </Ingredients>
+        <Chars>
+            <AlcoholContent>5.0</AlcoholContent>
+            <Transparency>90</Transparency>
+            <Filtered>true</Filtered>
+            <Calories>43</Calories>
+            <Packaging>
+                <Volume>0.5</Volume>
+                <Material>Скло</Material>
+            </Packaging>
+        </Chars>
+    </BeerItem>
+
+    <BeerItem id="b2" Al="no">
+        <Name>Оболонь</Name>
+        <Type>Світле</Type>
+        <Manufacturer>Оболонь</Manufacturer>
+        <Ingredients>
+            <Ingredient>вода</Ingredient>
+            <Ingredient>солод</Ingredient>
+            <Ingredient>хміль</Ingredient>
+            <Ingredient>цукор</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Transparency>95</Transparency>
+            <Filtered>false</Filtered>
+            <Calories>38</Calories>
+            <Packaging>
+                <Volume>0.5</Volume>
+                <Material>Пластик</Material>
+            </Packaging>
+        </Chars>
+    </BeerItem>
+
+</Beer>
