@@ -1,7 +1,8 @@
 package main.tests;
 
-import com.beer.model.BeerItemType;
-import main.DomBeerParser;
+
+import main.com.beer.parsers.DomBeerParser;
+import main.com.gen.BeerItemType;
 import org.junit.jupiter.api.*;
 
 import javax.xml.transform.Transformer;

@@ -36,9 +36,18 @@
 
     <xs:complexType name="IngredientsType">
         <xs:sequence>
-            <xs:element name="Ingredient" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="Ingredient" type="IngredientEnumType" maxOccurs="4"/>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:simpleType name="IngredientEnumType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Вода"/>
+            <xs:enumeration value="Хміль"/>
+            <xs:enumeration value="Солод"/>
+            <xs:enumeration value="Цукор"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:complexType name="BeerItemType">
         <xs:sequence>

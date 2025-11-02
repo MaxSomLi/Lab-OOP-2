@@ -3,9 +3,9 @@
         <Type>Світле</Type>
         <Manufacturer>Львівська пивоварня</Manufacturer>
         <Ingredients>
-            <Ingredient>вода</Ingredient>
-            <Ingredient>ячмінний солод</Ingredient>
-            <Ingredient>хміль</Ingredient>
+            <IngredientEnumType>Вода</IngredientEnumType>
+            <IngredientEnumType>Солод</IngredientEnumType>
+            <IngredientEnumType>Хміль</IngredientEnumType>
         </Ingredients>
         <Chars>
             <AlcoholContent>5.0</AlcoholContent>
@@ -22,10 +22,10 @@
         <Type>Світле</Type>
         <Manufacturer>Оболонь</Manufacturer>
         <Ingredients>
-            <Ingredient>вода</Ingredient>
-            <Ingredient>солод</Ingredient>
-            <Ingredient>хміль</Ingredient>
-            <Ingredient>цукор</Ingredient>
+            <IngredientEnumType>Вода</IngredientEnumType>
+            <IngredientEnumType>Солод</IngredientEnumType>
+            <IngredientEnumType>Хміль</IngredientEnumType>
+            <IngredientEnumType>Цукор</IngredientEnumType>
         </Ingredients>
         <Chars>
             <Transparency>95</Transparency>
